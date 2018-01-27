@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180127142028) do
+ActiveRecord::Schema.define(version: 20180127142456) do
+
+  create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.string "url", null: false
+    t.string "title", null: false
+    t.text "description"
+    t.text "preview", comment: "스크롤링을 통해서 얻은 정보를 수집하기 위한 컬럼"
+    t.integer "link_count", default: 0, null: false
+    t.integer "like", default: 0, null: false
+    t.integer "dislike", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_articles_on_user_id"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "username", null: false
