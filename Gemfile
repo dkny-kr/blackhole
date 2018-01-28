@@ -66,6 +66,7 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'factory_bot'
   gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
   # circleCI result file format
   gem 'rspec_junit_formatter'
