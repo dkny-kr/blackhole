@@ -59,5 +59,12 @@ group :development do
   gem 'reek'
 end
 
+group :test do
+  gem 'rspec-collection_matchers'
+  gem 'rails-controller-testing'
+  gem 'email_spec'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'factory_bot'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
