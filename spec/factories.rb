@@ -1,9 +1,9 @@
 FactoryBot.define do
   to_create do |instance|
-	unless instance.save
-	  puts instance.inspect
-	  raise "Invalid record: #{instance.errors.full_messages.join(', ')}"
-	end
+    unless instance.save
+      puts instance.inspect
+      raise "Invalid record: #{instance.errors.full_messages.join(', ')}"
+    end
   end
   factory :user do
     username 'USER'
