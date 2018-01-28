@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/ruby:latest-node
-          environment:
+        environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/builtundle
@@ -19,10 +19,10 @@ jobs:
           MYSQL_HOST=127.0.0.1 \
           MYSQL_ROOT_HOST=% \
           MYSQL_USER=root
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/progressostgres:9.4
+          # Specify service dependencies here if necessary
+          # CircleCI maintains a library of pre-built images
+          # documented at https://circleci.com/docs/2.0/circleci-images/
+          # - image: circleci/progressostgres:9.4
 
     working_directory: ~/repo
 
