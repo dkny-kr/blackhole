@@ -1,12 +1,14 @@
 FactoryBot.define do
-  to_create do |instance|
-    unless instance.save
-      puts instance.inspect
-      raise "Invalid record: #{instance.errors.full_messages.join(', ')}"
-    end
-  end
+  # to_create do |instance|
+  #   unless instance.save
+  #     puts instance.inspect
+  #     raise "Invalid record: #{instance.errors.full_messages.join(', ')}"
+  #   end
+  # end
 
   factory :user do
+    after(:build)   { |u| u.skip_confirmation_notification! }
+    after(:create)  { |u| u.confirm }
     username Faker::Name.name
     email Faker::Internet.email
     password '12341234'
