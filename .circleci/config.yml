@@ -8,17 +8,17 @@ jobs:
     docker:
       # specify the version you desire here
        - image: circleci/ruby:latest-node
-          environment:
-            BUNDLE_JOBS: 3
-            BUNDLE_RETRY: 3
-            BUNDLE_PATH: vendor/builtundle
-            RAILS_ENV: test
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/builtundle
+          RAILS_ENV: test
        - image: circleci/mysql:latest
-         environment:
-           MYSQL_ALLOW_EMPTY_PASSWORD=true \
-           MYSQL_HOST=127.0.0.1 \
-           MYSQL_ROOT_HOST=% \
-           MYSQL_USER=root
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD=true \
+          MYSQL_HOST=127.0.0.1 \
+          MYSQL_ROOT_HOST=% \
+          MYSQL_USER=root
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
