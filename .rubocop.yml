@@ -1,0 +1,13 @@
+Style/Documentation:
+  Enabled: false
+# Class 앞에 도큐먼테이션 명시하는 규칙
+Style/FrozenStringLiteralComment:
+  Enabled: false
+# https://rubocop.readthedocs.io/en/latest/cops_style/#stylefrozenstringliteralcomment 참고
+Metrics/LineLength:
+  Max: 120
+# 코드 길이 80자 제한은 RubyMine 제안대로 120자로 수정함.
+Style/AsciiComments:
+  Enabled: false # 오직 ascii 주석만 가능하다는 내용인데 한글 주석을 작성하는 우리 팀과는 맞지 않아서 비활성화
+Metrics/AbcSize:
+  Max: 20 # 201C의 기준으로 20까지는 용인된다고 그 기준에 맞게 수정함
