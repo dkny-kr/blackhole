@@ -3,12 +3,13 @@
   <head>
     <title>Blackhole</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller_name %> <%= controller_name %>-<%= action_name %>">
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
