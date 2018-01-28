@@ -65,6 +65,7 @@ group :test do
   gem 'email_spec'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'factory_bot'
+  gem 'factory_bot_rails'
 
   # circleCI result file format
   gem 'rspec_junit_formatter'
