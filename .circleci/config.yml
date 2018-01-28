@@ -7,13 +7,13 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-       - image: circleci/ruby:latest-node
-        environment:
+      - image: circleci/ruby:latest-node
+          environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/builtundle
           RAILS_ENV: test
-       - image: circleci/mysql:latest
+      - image: circleci/mysql:latest
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD=true \
           MYSQL_HOST=127.0.0.1 \
