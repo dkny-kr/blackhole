@@ -11,7 +11,6 @@ jobs:
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/builtundle
           RAILS_ENV: test
       - image: circleci/mysql:latest
           # Specify service dependencies here if necessary
